@@ -4,8 +4,7 @@ import fello.pojo.Member;
 import fello.model.Model;
 import fello.pojo.Team;
 import java.sql.SQLException;
-import javax.swing.table.AbstractTableModel;
-public class MemberManager extends AbstractTableModel{
+public class MemberManager{
    Member member = new Member();
    Model model=Model.getInstance();
    Team team = new Team();
@@ -98,22 +97,5 @@ public class MemberManager extends AbstractTableModel{
     }
     public void selectAll() throws SQLException{
         model.selectAll(tableMember);
-    }
-
-    @Override
-    public int getRowCount() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getColumnCount() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
- 
-        
+    }   
 }
